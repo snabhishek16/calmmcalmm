@@ -1,0 +1,70 @@
+
+
+@media  (min-width: 991px) and (max-width:1024px ){
+    .cd-timeline-img i {
+        padding: 18px !important;
+        color: white;
+    }
+
+
+    #cd-timeline {
+        width: 100%;
+    }
+
+    .cd-timeline-content .cd-date {
+        position: absolute;
+        width: 100%;
+        left: 122%;
+        top: 6px;
+        padding:12px;
+        font-size: 16px;
+        font-size: 1rem;
+    }
+
+    .cd-container {
+        /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+        width: 90%;
+        max-width: 1024px;
+        margin: 0;
+    }
+
+
+    .studio-features-subheading .studio-features-subheading1 {
+        color: #FF396A;
+        font-size: 1.1rem;
+        text-align: left;
+    }
+
+    .studio-features {
+        padding: 7% 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .studio-features2 {
+        padding:0;
+    }
+
+    .studio-feature-leftbg {
+        padding-left: 14%;
+        padding-top: 20px;
+        padding-bottom:40px;
+        background:url("../images/1.png");
+        background-size: cover;
+    }
+
+    .studio-feature-rightbg {
+        padding-right: 14%;
+        padding-top: 20px;
+        padding-bottom:40px;
+        background:url("../images/2.png");
+        margin-top:-3px;
+        background-size: cover;
+    }
+
+    .studio-features2 p {
+        text-align: justify;
+        line-height: 22px;
+    }
+
+}
+

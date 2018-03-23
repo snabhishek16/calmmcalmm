@@ -1,12 +1,99 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>CALMMCALMM</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-<h4>CALMMCALMM</h4>
+{% load staticfiles %}
 
-</body>
-</html>
+{% block content %}
+
+<div class="row">
+    <div class="col s12">
+        <div class="carousel carousel-slider parallax">
+            <a class="carousel-item" href="#one!"><img src="/static/images/jewellery-1.jpg"></a>
+            <a class="carousel-item" href="#two!"><img src="/static/images/jewellery-2.jpg"></a>
+        </div>
+    </div>
+</div>
+
+<div class="row container">
+    <div class="col s12 m4">
+        <img class="materialboxed"  width="100%" src="/static/images/jewellery-1.jpg">
+    </div>
+    <div class="col s12 m4">
+        <img class="materialboxed"  width="100%" src="/static/images/jewellery-1.jpg">
+    </div>
+    <div class="col s12 m4">
+        <img class="materialboxed"  width="100%" src="/static/images/jewellery-1.jpg">
+    </div>
+
+</div>
+
+<div class="row container">
+    <div class="col s12">
+        <h5 class="center">BEST SELLERS</h5>
+        <!--<i class="material-icons center">leak_add</i>-->
+        <p class="center">This unique jewelry is handcrafted on the beautiful island of Nantucket using fine silver and semi precious stones.
+
+            View glasse fashion collection 2018 by Fanbong</p>
+
+    </div>
+</div>
+
+<div class="row container">
+    <div class="col s12 center">
+        {% if cat %}
+        {% for obj in cat %}
+
+        <a class="waves-effect waves-teal btn-flat"><i class="">{{obj.category}}</i></a>
+        {% endfor %}
+        {% else %}
+
+        <p class="center">No categories</p>
+
+        {% endif %}
+
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col s12 m3 offset-m1">
+        {% if product_list %}
+
+        {% for obj in product_list %}
+        <div class="card">
+            <div class="card-image">
+                <img src="{{obj.image.url}}" class="responsive-img-abhi">
+                <!--<img src="/static/images/jewellery-1.jpg">-->
+
+                <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
+            </div>
+            <div class="card-content">
+                <p>{{obj.Gender_category}}</p>
+
+            </div>
+            <div class="card-action grey-text">
+                <span class="card-title ">{{obj.title}}</span>
+                <p><strike>{{obj.original_price}}</strike>{{obj.actual_price}}</p>
+                <!--<a href="#">This is a link</a>-->
+                {% endfor %}
+                {% else %}
+
+                <h2 class="center">No results found for this category</h2>
+                <p class="center">Kindly visit again later</p>
+
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock content %}
+
+
+{% block script %}
+
+{% endblock script %}
