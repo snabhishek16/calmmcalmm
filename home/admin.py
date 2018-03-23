@@ -10,3 +10,4 @@ from .models import *
 admin.site.register(Category)
 admin.site.register(Gender_category)
 admin.site.register(Products)
+admin.site.register(Home_blog)

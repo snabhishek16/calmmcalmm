@@ -22,7 +22,7 @@
 /* BASE classes */
 
 h2 , h3, h4, h5, h6 {
-	font-family:'Oswald', 'Material Icons', sans-Serif;
+	/*font-family:'Oswald', 'Material Icons', sans-serif;*/
 }
 
 .no-decoration {

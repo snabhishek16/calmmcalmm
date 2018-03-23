@@ -31,7 +31,14 @@ class Products(models.Model):
     def __unicode__(self):
         return self.title
 
+class Home_blog(models.Model):
+    username = models.CharField(max_length=20)
+    user_image = models.FileField(upload_to='user/%Y/%m/%d/')
+    title = models.CharField(max_length=20)
+    content = models.TextField(max_length=2000)
+    posted_on = models.DateTimeField(auto_now=False, auto_now_add=True, null=True)
+    updated = models.DateTimeField(auto_now=True, auto_now_add=False, null=True)
 
 
-
-
+    def __unicode__(self):
+        return self.title
