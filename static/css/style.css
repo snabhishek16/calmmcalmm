@@ -1579,3 +1579,95 @@ header h1 {
 	vertical-align: top;
 }
 
+
+/*abhi*/
+
+{box-sizing: border-box;}
+
+.container_a {
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.container_a:hover .overlay {
+  opacity: 1;
+}
+
+
+
+
+
+
+.style_prevu_kit
+{
+    display:inline-block;
+    border:0;
+    width:280px;
+    height:300px;
+    position: relative;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1);
+
+}
+.style_prevu_kit:hover
+{
+    box-shadow: 0px 0px 150px #000000;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.25);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.25);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.25);
+    transition: all 200ms ease-in;
+    transform: scale(1.25);
+}
+
+
+.hero {
+background: url('images/hero.jpg') no-repeat center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+display: table;
+width: 100%;
+}
+.hero .container {
+display: table-cell;
+text-align: center;
+vertical-align: middle;
+height: 689px
+}
+
+
+
+
