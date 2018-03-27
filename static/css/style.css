@@ -1652,21 +1652,6 @@ header h1 {
 }
 
 
-.hero {
-background: url('images/hero.jpg') no-repeat center center;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-display: table;
-width: 100%;
-}
-.hero .container {
-display: table-cell;
-text-align: center;
-vertical-align: middle;
-height: 689px
-}
 
 
 

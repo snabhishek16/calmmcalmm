@@ -4,6 +4,7 @@
 
 {% block content %}
 
+
 <div class="row">
     <div class="col s12">
         <div class="carousel carousel-slider">
@@ -50,6 +51,8 @@
         {% endif %}
     </div>
 </div>
+
+
 
 <div class="row">
     <div class="col s12">
@@ -124,9 +127,11 @@
 
 <div class="row">
     <div class="col s12">
-        <img src="/static/images/banner2.jpg" alt="banner">
+            <img src="/static/images/banner2.jpg">
     </div>
 </div>
+
+
 
 
 <div class="row container">
@@ -145,7 +150,7 @@
             {% for obj in blog %}
             <div class="col s12 m6">
                 <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
+                    <div class="card-image_a waves-effect waves-block waves-light">
                         <img class="activator" src="{{obj.user_image.url}}" >
                     </div>
                     <div class="card-content">
@@ -169,7 +174,6 @@
         </div>
     </div>
 </div>
-
 
 
 

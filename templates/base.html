@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="{% static 'css/medium.css' %}">
     <link rel="stylesheet" href="{% static 'css/medium_and_below.css' %}">
     <link rel="stylesheet" href="{% static 'css/small_screen.css' %}">
-     <!--&lt;!&ndash;Import bootstrap.css&ndash;&gt;-->
+    <!--&lt;!&ndash;Import bootstrap.css&ndash;&gt;-->
     <!--<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">-->
     <!--<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css.map' %}">-->
     <!--<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css.map' %}">-->
@@ -34,19 +34,62 @@
 
 <body>
 
-
 <nav>
-    <div class="nav-wrapper white">
-        <a href="/static/images/logo.png" class="brand-logo"></a>
-        <ul id="nav-mobile" class="hide-on-med-and-down">
-            <li><a class="black-text" href="{% url 'home:index' %}">HOME</a></li>
-            <li><a class="black-text" href="#">SHOP</a></li>
-            <li><a class="black-text" href="#">BLOG</a></li>
-            <li><a class="black-text" href="#">ABOUT</a></li>
-            <li><a class="black-text" href="#">CONTACT</a></li>
+    <div class="nav-wrapper white navigation hide-on-small-only">
+        <span class="logo-holder">
+                    <a href="{% url 'home:index' %}" class="no-decoration"><img src="/static/images/logo-preview.jpg" alt="logo" class="brand-logo-img"> </a>
+
+        </span>
+
+        <ul class="left hide-on-med-and-down">
+            <li ><a class='black-text text-blue-ligten-2 {% if home_page %} nav-active {% endif %}' href="{% url 'home:index' %}">Home</a></li>
+            <li><a class='black-text text-blue-ligten-2 ' href="">SHOP</a></li>
+            <li><a class='black-text text-blue-ligten-2 ' href="">BLOG</a></li>
+            <li ><a class='black-text text-blue-ligten-2 ' href="">ABOUT</a></li>
+            <li ><a class='black-text text-blue-ligten-2 ' href="">CONTACT</a></li>
         </ul>
     </div>
+    <div class="row navigation hide-on-med-only hide-on-large-only" id="customNavbar">
+        <div class="col s4">
+            <a class="btn btn-floating  white-text waves-effect waves-light button-collapse left " data-activates="slide-out">
+                <i class="material-icons">menu</i>
+            </a>
+        </div>
+        <div class="col s4 center">
+            <a href="{% url 'home:index' %}" class="no-decoration"><img src="/static/images/logo-preview.jpg" alt="logo"  class="brand-logo-img"></a>
+        </div>
+        <div class="col s4">
+
+        </div>
+    </div>
+    <!--<ul id="slide-out" class="side-nav">-->
+    <!--<li>-->
+    <!--<h3 class="center">-->
+    <!--<a href="{{% url 'home:index' %}" class="no-decoration"><img src="/static/images/logo-preview.jpg" alt="logo"  class="brand-logo-img"></a>-->
+    <!--</h3>-->
+    <!--</li>-->
+    <!--<br>-->
+    <!--<li ><a class='black-text text-blue-ligten-2 {% if home_page %} nav-active {% endif %}' href="{% url 'home:index' %}">Home</a></li>-->
+    <!--<li><a class='black-text text-blue-ligten-2' href="">SHOP</a></li>-->
+    <!--<li><a class='black-text text-blue-ligten-2' href="">BLOG</a></li>-->
+    <!--<li><a class='black-text text-blue-ligten-2' href="">ABOUT</a></li>-->
+    <!--<li><a class='black-text text-blue-ligten-2' href="">CONTACT</a></li>-->
+    <!--</ul>-->
 </nav>
+
+
+<!--<nav>-->
+<!--<div class="nav-wrapper white">-->
+<!--<a href="/static/images/logo-preview.jpg" class="brand-logo"></a>-->
+<!--<ul id="nav-mobile" class="hide-on-med-and-down">-->
+<!--<li><a class="black-text" href="{% url 'home:index' %}">HOME</a></li>-->
+<!--<li><a class="black-text" href="#">SHOP</a></li>-->
+<!--<li><a class="black-text" href="#">BLOG</a></li>-->
+<!--<li><a class="black-text" href="#">ABOUT</a></li>-->
+<!--<li><a class="black-text" href="#">CONTACT</a></li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</nav>-->
 
 
 
@@ -54,31 +97,57 @@
 
 {% endblock content %}
 
- <footer class="page-footer white black-text">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 >Footer</h5>
-                <p class="">You can use rows and columns here to organize your footer content.</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <!--<h5 class="">Links</h5>-->
-                <!--<ul>-->
-                  <!--<li><a class="grey-text " href="#!">Link 1</a></li>-->
-                  <!--<li><a class="grey-text " href="#!">Link 2</a></li>-->
-                  <!--<li><a class="grey-text " href="#!">Link 3</a></li>-->
-                  <!--<li><a class="grey-text " href="#!">Link 4</a></li>-->
-                <!--</ul>-->
-              </div>
+<footer class="page-footer white black-text">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <img src="/static/images/logo-preview.jpg" alt="logo">
+                <h5 >Follow us on</h5>
+                <a href="#" class="fa fa-facebook"></a> |
+                <a href="#" class="fa fa-twitter"></a> |
+                <a href="https://www.instagram.com/calmmcalmm_/" target="_blank" class="fa fa-instagram"></a>
+
+
             </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="container black-text">
+            <div class="col l4 offset-l2 s12">
+                <h5 class="">CONCIERGE</h5>
+                <p>Don't hesitate in contacting us for any questions you might have.</p>
+                <div class="row">
+                    <div class="col s1">
+                       <ul>
+                    <li><i href="" class="fa fa-question"></i></li>
+                    <li><i href="" class="fa fa-envelope"></i></li>
+                    <li><i href="" class="fa fa-phone"></i></li>
+                    <li><i href="" class="fa fa-location-arrow"></i></li>
+                </ul>
+                    </div>
+                    <div class="col s11">
+                        <ul>
+                    <li><i href="" class=""> FREQUENTLY ASKED QUESTIONS</i></li>
+                    <li><i href="" class=""> +82 010 2113 4938</i></li>
+                    <li><i href="" class=""> hongddo12@gmail.com</i></li>
+                    <li><i href="" class=""> 서울시 은평구 신사동 23-23번지 3층 301호 (증산로 471-5)</i></li>
+
+                </ul>
+
+                    </div>
+                </div>
+                <!--<ul>-->
+                    <!--<li><i href="" class="fa fa-location-arrow"> 서울시 은평구 신사동 23-23번지 3층 301호 (증산로 471-5)</i></li>-->
+                    <!--<li><i href="" class="fa fa-question"> FREQUENTLY ASKED QUESTIONS</i></li>-->
+                    <!--<li><i href="" class="fa fa-phone"> +82 010 2113 4938</i></li>-->
+                    <!--<li><i href="" class="fa fa-envelope"> hongddo12@gmail.com</i></li>-->
+                <!--</ul>-->
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container black-text">
             © 2014 Copyright Text
             <a class="grey-text  right" href="#!">More Links</a>
-            </div>
-          </div>
-        </footer>
+        </div>
+    </div>
+</footer>
 
 
 
@@ -110,6 +179,19 @@
             indicators: true
         });
     });
+</script>
+<script>
+
+    $(document).ready(function(){
+        $('.parallax').parallax();
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $('.fixed-action-btn').floatingActionButton();
+    });
+
 </script>
 
 
