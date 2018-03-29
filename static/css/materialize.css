@@ -5506,6 +5506,7 @@ button.btn-floating {
           transform: scale(0);
 }
 
+
 .btn-flat {
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -5516,6 +5517,10 @@ button.btn-floating {
   transition: background-color .2s;
 }
 
+.btn-flat.active{
+  background-color: #26a69a;
+
+}
 .btn-flat:focus, .btn-flat:hover {
   -webkit-box-shadow: none;
           box-shadow: none;

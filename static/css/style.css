@@ -1651,6 +1651,19 @@ header h1 {
     transform: scale(1.25);
 }
 
+.footer-logo img{
+	width: 80%;
+}
+
+.banner {
+	max-height: 600px;
+}
+
+.banner img{
+	height: 80%;
+	width: 100%;
+}
+
 
 
 
