@@ -1657,14 +1657,33 @@ header h1 {
 
 .banner {
 	max-height: 600px;
+	position: relative;
+    text-align: center;
+    color: white;
 }
+
 
 .banner img{
 	height: 80%;
 	width: 100%;
 }
 
+.carousel.carousel-slider .carousel-item {
+  min-height: 420px;
+}
 
+.slide_a {
+	padding: 1 5%;
+	height: 350px;
+	overflow-y: scroll;
+	position: initial;
+}
+
+.slide_b {
+	padding: 5%;
+	/*height: 350px;*/
+	overflow-y: scroll;
+}
 
 
 

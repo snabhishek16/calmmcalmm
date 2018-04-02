@@ -38,7 +38,7 @@
 <nav>
     <div class="nav-wrapper white navigation hide-on-small-only">
         <span class="logo-holder">
-                    <a href="{% url 'home:index' %}" class="no-decoration"><img src="/static/images/logo-preview.jpg" alt="logo" class="brand-logo-img"> </a>
+                    <a href="{% url 'home:index' %}" class="no-decoration"><img src="/static/images/logo-preview.jpg" alt="logo" class="brand-logo-img "> </a>
 
         </span>
 
@@ -52,8 +52,9 @@
     </div>
     <div class="row navigation hide-on-med-only hide-on-large-only" id="customNavbar">
         <div class="col s4">
-            <a class="btn btn-floating  white-text waves-effect waves-light button-collapse left " data-activates="slide-out">
-                <i class="material-icons">menu</i>
+            <!--<a class="btn btn-floating  white-text waves-effect waves-light button-collapse left " data-activates="slide-out">-->
+            <!--<a href="#" data-target="slide-out" class="sidenav-trigger blue"><i class="material-icons">menu</i></a>-->
+            <a class="btn btn-floating  white-text waves-effect waves-light button-collapse left sidenav-trigger" data-target="slide-out"><i class="material-icons">menu</i>
             </a>
         </div>
         <div class="col s4 center">
@@ -63,34 +64,25 @@
 
         </div>
     </div>
-    <!--<ul id="slide-out" class="side-nav">-->
-    <!--<li>-->
-    <!--<h3 class="center">-->
-    <!--<a href="{{% url 'home:index' %}" class="no-decoration"><img src="/static/images/logo-preview.jpg" alt="logo"  class="brand-logo-img"></a>-->
-    <!--</h3>-->
-    <!--</li>-->
-    <!--<br>-->
-    <!--<li ><a class='black-text text-blue-ligten-2 {% if home_page %} nav-active {% endif %}' href="{% url 'home:index' %}">Home</a></li>-->
-    <!--<li><a class='black-text text-blue-ligten-2' href="">SHOP</a></li>-->
-    <!--<li><a class='black-text text-blue-ligten-2' href="">BLOG</a></li>-->
-    <!--<li><a class='black-text text-blue-ligten-2' href="">ABOUT</a></li>-->
-    <!--<li><a class='black-text text-blue-ligten-2' href="">CONTACT</a></li>-->
-    <!--</ul>-->
 </nav>
 
 
-<!--<nav>-->
-<!--<div class="nav-wrapper white">-->
-<!--<a href="/static/images/logo-preview.jpg" class="brand-logo"></a>-->
-<!--<ul id="nav-mobile" class="hide-on-med-and-down">-->
-<!--<li><a class="black-text" href="{% url 'home:index' %}">HOME</a></li>-->
-<!--<li><a class="black-text" href="#">SHOP</a></li>-->
-<!--<li><a class="black-text" href="#">BLOG</a></li>-->
-<!--<li><a class="black-text" href="#">ABOUT</a></li>-->
-<!--<li><a class="black-text" href="#">CONTACT</a></li>-->
-<!--</ul>-->
-<!--</div>-->
-<!--</nav>-->
+
+  <ul id="slide-out" class="sidenav">
+    <li>
+    <h3 class="center">
+    <a href="{{% url 'home:index' %}" class="no-decoration"><img src="/static/images/logo-preview.jpg" alt="logo"  class="brand-logo-img"></a>
+    </h3>
+        <hr>
+    </li>
+    <br>
+    <li ><a class='black-text text-blue-ligten-2 {% if home_page %} nav-active {% endif %}' href="{% url 'home:index' %}">HOME</a></li>
+    <li><a class='black-text text-blue-ligten-2' href="">SHOP</a></li>
+    <li><a class='black-text text-blue-ligten-2' href="">BLOG</a></li>
+    <li><a class='black-text text-blue-ligten-2' href="">ABOUT</a></li>
+    <li><a class='black-text text-blue-ligten-2' href="">CONTACT</a></li>
+  </ul>
+  <!--<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>-->
 
 
 
@@ -107,9 +99,9 @@
                 </div>
 
                 <h5 >Follow us on</h5>
-                <a href="#" class="fa fa-facebook"></a> |
-                <a href="#" class="fa fa-twitter"></a> |
-                <a href="https://www.instagram.com/calmmcalmm_/" target="_blank" class="fa fa-instagram"></a>
+                <!--<a href="#" class="fa fa-facebook"></a> |-->
+                <!--<a href="#" class="fa fa-twitter"></a> |-->
+                <a href="https://www.instagram.com/calmmcalmm_/" target="_blank" class="fa fa-instagram" title="Instagram"></a>
 
 
 
@@ -148,8 +140,8 @@
     </div>
     <div class="footer-copyright">
         <div class="container black-text">
-            © 2014 Copyright Text
-            <a class="grey-text  right" href="#!">More Links</a>
+            © 2018 Copyright
+            <!--<a class="grey-text  right" href="#!">More</a>-->
         </div>
     </div>
 </footer>
@@ -167,9 +159,9 @@
 <!--<script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>-->
 
 <script>
-    $(document).ready(function(){
-        $('.sidenav').sidenav();
-    });
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
 </script>
 
 <script>
