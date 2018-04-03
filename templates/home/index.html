@@ -6,18 +6,18 @@
 
 
 <div class="row">
-    <div class="col s12">
+    <!--<div class="col s12">-->
         <div class="carousel carousel-slider">
             <a class="carousel-item" href="#one!"><img src="/static/images/prisc.png"></a>
             <a class="carousel-item" href="#two!"><img src="/static/images/jewellery-3.jpg"></a>
             <!--<a class="carousel-item" href="#three!"><img src="/static/images/jewellery-2.jpg"></a>-->
             <!--<a class="carousel-item" href="#four!"><img src="/static/images/jewellery-1.jpg"></a>-->
         </div>
-    </div>
+    <!--</div>-->
 </div>
 
 <div class="row container">
-    <div class="col s12 m4  center">
+    <div class="col s12 m4  center ">
         <img src="/static/images/adv1.jpg" alt="Avatar" class="style_prevu_kit">
         <!--<div class="overlay"><p>Lorem, sed do eiusmod</p></div>-->
     </div>
@@ -90,7 +90,7 @@
         <div class="row">
             {% if product_list %}
             {% for obj in product_list %}
-            <div class="col s12 m3">
+            <div class="col s12 m4 l3">
                 <div class="card">
                     <div class="card-image">
                         <img src="{{obj.image.url}}" class="responsive-img materialboxed">
@@ -132,7 +132,7 @@
         <div class="row">
             {% if product_latest %}
             {% for obj in product_latest %}
-            <div class="col s12 m3">
+            <div class="col s12 m4 l3">
                 <div class="card">
                     <div class="card-image">
                         <img src="{{obj.image.url}}" class="responsive-img materialboxed">
@@ -178,12 +178,12 @@
     </div>
 </div>
 
-<div class="row container">
+<div class="row news">
     <div class="col s12">
-        <div class="row ">
+        <div class="row">
             {% if blog %}
             {% for obj in blog %}
-            <div class="col s12 m6">
+            <div class="col s12 m6 l4">
                 <div class="card">
                     <div class="card-image_a waves-effect waves-block waves-light">
                         <img class="activator" src="{{obj.user_image.url}}" >
@@ -192,7 +192,7 @@
                         <!--<span class="card-title activator grey-text text-darken-4">Title<i class="material-icons right">more_vert</i></span>-->
                         <p><i href="" class="fa fa-user"> {{obj.username}}</i> | <i href=""class="fa fa-calendar"> {{obj.posted_on}}</i></p>
                         <span class="card-title">{{obj.title|truncatechars:50}}</span>
-                        <p>{{obj.content|truncatechars:50}}</p>
+                        <p>{{obj.content|truncatechars:40}}</p>
                         <p href="" class=" activator red-text text-darken-4">Read more<i class="material-icons right">more_vert</i></p>
                     </div>
                     <div class="card-reveal">

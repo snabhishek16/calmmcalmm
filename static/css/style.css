@@ -1642,13 +1642,13 @@ header h1 {
     box-shadow: 0px 0px 150px #000000;
     z-index: 2;
     -webkit-transition: all 200ms ease-in;
-    -webkit-transform: scale(1.25);
+    -webkit-transform: scale(1.1);
     -ms-transition: all 200ms ease-in;
-    -ms-transform: scale(1.25);
+    -ms-transform: scale(1.1);
     -moz-transition: all 200ms ease-in;
-    -moz-transform: scale(1.25);
+    -moz-transform: scale(1.1);
     transition: all 200ms ease-in;
-    transform: scale(1.25);
+    transform: scale(1.1);
 }
 
 .footer-logo img{
@@ -1656,7 +1656,7 @@ header h1 {
 }
 
 .banner {
-	max-height: 600px;
+	max-height: 500px;
 	position: relative;
     text-align: center;
     color: white;
@@ -1664,13 +1664,11 @@ header h1 {
 
 
 .banner img{
-	height: 80%;
+	height: 90%;
 	width: 100%;
 }
 
-.carousel.carousel-slider .carousel-item {
-  min-height: 420px;
-}
+
 
 .slide_a {
 	padding: 1 5%;
@@ -1686,7 +1684,23 @@ header h1 {
 }
 
 
+.news {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 90%;
+}
 
+@media only screen and (min-width: 601px) {
+  .news {
+    width: 85%;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  .news {
+    width: 95%;
+  }
+}
 
 
 

@@ -8417,6 +8417,7 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
 
 .carousel .carousel-item > img {
   width: 100%;
+
 }
 
 .carousel .indicators {
