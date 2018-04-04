@@ -52,6 +52,7 @@
         background-size: cover;
     }
 
+
     .studio-feature-rightbg {
         padding-right: 14%;
         padding-top: 20px;
@@ -67,11 +68,14 @@
     }
 
 
+    /*calm_home*******/
+
+
    .carousel {
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 650px;
   -webkit-perspective: 500px;
           perspective: 500px;
   -webkit-transform-style: preserve-3d;
@@ -81,12 +85,13 @@
 }
 
 
+
     .style_prevu_kit
 {
     display:inline-block;
     border:0;
-    width:220px;
-    height:250px;
+    width:250px;
+    height:150px;
     position: relative;
     -webkit-transition: all 200ms ease-in;
     -webkit-transform: scale(1);

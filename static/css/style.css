@@ -1580,7 +1580,7 @@ header h1 {
 }
 
 
-/*abhi*/
+/*calm_home*******/
 
 {box-sizing: border-box;}
 
@@ -1617,15 +1617,12 @@ header h1 {
 
 
 
-
-
-
 .style_prevu_kit
 {
     display:inline-block;
     border:0;
-    width:280px;
-    height:300px;
+    width:400px;
+    height:250px;
     position: relative;
     -webkit-transition: all 200ms ease-in;
     -webkit-transform: scale(1);
