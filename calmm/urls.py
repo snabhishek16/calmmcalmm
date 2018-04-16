@@ -15,8 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from home import views as home_views
 from django.conf import settings
+from home import views as home_views
 from django.conf.urls.static import static
 
 
@@ -24,7 +24,14 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include("home.urls", namespace='home')),
+    url(r'^shop/$', home_views.shop_page, name='shop'),
+    # url(r'^blog/', include("blog.urls", namespace='blog')),
+    # # url(r'^about/', include("about.urls", namespace='about')),
+    # # url(r'^contact/$', home_views.contact, name='contact_us'),
+    # # url(r'^contact/', include("contact.urls", namespace='contact')),
 ]
+
+
 
 
 if settings.DEBUG:

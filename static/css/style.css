@@ -1653,7 +1653,7 @@ header h1 {
 }
 
 .banner {
-	max-height: 1200px;
+	max-height: 600px;
 	position: relative;
     text-align: center;
     color: white;
@@ -1670,7 +1670,8 @@ header h1 {
 .slide_a {
 	padding: 1 5%;
 	height: 700px;
-	overflow-y: scroll;
+	/*overflow-y: scroll;*/
+	overflow: hidden;
 	position: initial;
 }
 

@@ -417,11 +417,11 @@
 
 
 .banner {
-	max-height: 280px;
+	max-height: 160px;
 }
 
 .banner img{
-	height: 90%;
+	height: 100%;
 	width: 100%;
 }
 

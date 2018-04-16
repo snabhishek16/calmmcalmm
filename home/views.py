@@ -13,8 +13,6 @@ def home_page(request):
         product_latest = Products.objects.filter(posted_on__lte=timezone.now()).order_by('-id')[:4]
         cat = Category.objects.all()
         blog = Home_blog.objects.all()
-        print blog
-
 
         context = {
             'product_list': product_list,
@@ -27,14 +25,10 @@ def home_page(request):
         return render(request, 'home/index.html', context)
 
 
-# def products_list(request):
-#
-#
-#     return render(request, 'home/index.html', context)
 
 def product_category(request, name=None):
     product_list = Products.objects.filter(posted_on__lte=timezone.now()).order_by('-posted_on')
-    product_latest = Products.objects.filter(posted_on__lte=timezone.now()).order_by('-id')[:4]
+    # product_latest = Products.objects.filter(posted_on__lte=timezone.now()).order_by('-id')[:4]
     cat = Category.objects.all()
     blog = Home_blog.objects.all()
     this_cat = get_object_or_404(cat, name=name)
@@ -44,7 +38,7 @@ def product_category(request, name=None):
 
     context = {
         'product_list': posts_cat,
-        'product_latest': product_latest,
+        # 'product_latest': product_latest,
         'cat': cat,
         'blog': blog,
         'current_category': name,
@@ -54,5 +48,17 @@ def product_category(request, name=None):
 
 
 
+def shop_page(request):
+    if request.method == 'GET':
+        product_list = Products.objects.filter(posted_on__lte=timezone.now()).order_by('-posted_on')
+        # product_latest = Products.objects.filter(posted_on__lte=timezone.now()).order_by('-id')[:4]
+        # cat = Category.objects.all()
+
+        context = {
+            'product_list': product_list,
+            # 'product_latest': product_latest,
+            # 'cat': cat,
 
 
+        }
+        return render(request, 'home/shop.html', context)

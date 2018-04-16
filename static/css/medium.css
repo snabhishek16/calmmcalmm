@@ -144,13 +144,14 @@
 .slide_a {
 	padding: 1 5%;
 	height: 550px;
-	overflow-y: scroll;
+	/*overflow-y: scroll;*/
+    overflow: hidden;
 	position: initial;
 }
 
 
 .banner {
-	max-height: 550px;
+	max-height: 400px;
 }
 
 .banner img{

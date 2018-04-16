@@ -6,5 +6,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="mypjt" />
     <orderEntry type="module" module-name="mypjt" />
+    <orderEntry type="module" module-name="hl" />
   </component>
 </module>
