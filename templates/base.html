@@ -36,8 +36,8 @@
 
         <ul class="left hide-on-med-and-down">
             <li ><a class='black-text text-blue-ligten-2 {% if home_page %} nav-active {% endif %}' href="{% url 'home:index' %}">Home</a></li>
-            <li><a class='black-text text-blue-ligten-2 ' href="">SHOP</a></li>
-            <li><a class='black-text text-blue-ligten-2 ' href="">BLOG</a></li>
+            <li><a class='black-text text-blue-ligten-2 ' href="{% url 'shop' %}">SHOP</a></li>
+            <li><a class='black-text text-blue-ligten-2 ' href="{% url 'blog:blogs' %}">BLOG</a></li>
             <li ><a class='black-text text-blue-ligten-2 ' href="">ABOUT</a></li>
             <li ><a class='black-text text-blue-ligten-2 ' href="">CONTACT</a></li>
         </ul>
@@ -66,10 +66,10 @@
     </li>
     <br>
     <li ><a class='black-text text-blue-ligten-2 {% if home_page %} nav-active {% endif %}' href="{% url 'home:index' %}">HOME</a></li>
-    <li><a class='black-text text-blue-ligten-2' href="">SHOP</a></li>
-    <li><a class='black-text text-blue-ligten-2' href="">BLOG</a></li>
+    <li><a class='black-text text-blue-ligten-2' href="{% url 'shop' %}">SHOP</a></li>
+    <li><a class='black-text text-blue-ligten-2' href="{% url 'blog:blogs' %}">BLOG</a></li>
     <li><a class='black-text text-blue-ligten-2' href="">ABOUT</a></li>
-    <li><a class='black-text text-blue-ligten-2' href="}">CONTACT</a></li>
+    <li><a class='black-text text-blue-ligten-2' href="">CONTACT</a></li>
 </ul>
 
 

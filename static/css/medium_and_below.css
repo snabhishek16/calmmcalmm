@@ -173,7 +173,7 @@
     top: 0;
     bottom: 0;
     width: 100%;
-    max-height: 145px;
+    max-height: 200px;
     }
 
     .card .card-image_a img {
@@ -203,7 +203,7 @@
 
 .slide_a {
 	padding: 1 5%;
-	height: 550px;
+	/*height: 550px;*/
 	overflow-y: scroll;
 	position: initial;
 }

@@ -1669,7 +1669,7 @@ header h1 {
 
 .slide_a {
 	padding: 1 5%;
-	height: 700px;
+	/*height: 700px;*/
 	/*overflow-y: scroll;*/
 	overflow: hidden;
 	position: initial;

@@ -18,8 +18,14 @@ from django.contrib import admin
 from blog import views as blog_views
 
 
-urlpatterns = [
-    url(r'^$', blog_views.blog_page, name='blog'),
-    # url('(?P<name>[\w-]+)/$', home_views.product_category, name='product_category')
-]
 
+
+
+urlpatterns = [
+    url(r'^$', blog_views.blog_page,name='blogs'),
+    # url(r'^(?P<id>\d+)/$', article,name='article'),
+    # url('^search/', search_blog, name='search_blog'),
+    # url('(?P<name>[\w-]+)/$', search_category, name='search_category')
+
+
+]

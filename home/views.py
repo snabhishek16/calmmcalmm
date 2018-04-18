@@ -9,13 +9,13 @@ from django.utils import timezone
 
 def home_page(request):
     if request.method == 'GET':
-        product_list = Products.objects.filter(posted_on__lte=timezone.now()).order_by('-posted_on')
-        product_latest = Products.objects.filter(posted_on__lte=timezone.now()).order_by('-id')[:4]
+        # product_list = Products.objects.filter(posted_on__lte=timezone.now()).order_by('-posted_on')
+        product_latest = Products.objects.filter(posted_on__lte=timezone.now()).order_by('-id')[:8]
         cat = Category.objects.all()
-        blog = Home_blog.objects.all()
+        blog = Home_blog.objects.filter(posted_on__lte=timezone.now()).order_by('-posted_on').order_by('-id')[:3]
 
         context = {
-            'product_list': product_list,
+            # 'product_list': product_list,
             'product_latest': product_latest,
             'cat': cat,
             'blog': blog,
@@ -27,18 +27,18 @@ def home_page(request):
 
 
 def product_category(request, name=None):
-    product_list = Products.objects.filter(posted_on__lte=timezone.now()).order_by('-posted_on')
-    # product_latest = Products.objects.filter(posted_on__lte=timezone.now()).order_by('-id')[:4]
+    # product_list = Products.objects.filter(posted_on__lte=timezone.now()).order_by('-posted_on')
+    product_latest = Products.objects.filter(posted_on__lte=timezone.now()).order_by('-id')[:8]
     cat = Category.objects.all()
-    blog = Home_blog.objects.all()
+    blog = Home_blog.objects.filter(posted_on__lte=timezone.now()).order_by('-posted_on').order_by('-id')[:3]
     this_cat = get_object_or_404(cat, name=name)
-    posts_cat = Products.objects.filter(category=this_cat.id).filter(posted_on__lte=timezone.now()).order_by('-posted_on')
+    posts_cat = Products.objects.filter(category=this_cat.id).filter(posted_on__lte=timezone.now()).order_by('-posted_on').order_by('-id')[:8]
 
 
 
     context = {
-        'product_list': posts_cat,
-        # 'product_latest': product_latest,
+        # 'product_list': product_list,
+        'product_latest': posts_cat,
         'cat': cat,
         'blog': blog,
         'current_category': name,
@@ -48,17 +48,36 @@ def product_category(request, name=None):
 
 
 
+
+
 def shop_page(request):
     if request.method == 'GET':
         product_list = Products.objects.filter(posted_on__lte=timezone.now()).order_by('-posted_on')
-        # product_latest = Products.objects.filter(posted_on__lte=timezone.now()).order_by('-id')[:4]
-        # cat = Category.objects.all()
+        cat = Category.objects.all()
 
         context = {
             'product_list': product_list,
-            # 'product_latest': product_latest,
-            # 'cat': cat,
+            'cat': cat,
 
 
         }
         return render(request, 'home/shop.html', context)
+
+
+def shop_product_category(request, name=None):
+    product_list = Products.objects.filter(posted_on__lte=timezone.now()).order_by('-posted_on')
+    cat = Category.objects.all()
+    blog = Home_blog.objects.all()
+    this_cat = get_object_or_404(cat, name=name)
+    posts_cat = Products.objects.filter(category=this_cat.id).filter(posted_on__lte=timezone.now()).order_by('-posted_on')
+
+
+
+    context = {
+        'product_list': posts_cat,
+        'cat': cat,
+        'blog': blog,
+        'current_category': name,
+
+    }
+    return render(request, 'home/shop.html', context)

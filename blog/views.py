@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-from models import *
+from home.models import *
 from django.shortcuts import render
 
 # Create your views here.
@@ -11,6 +11,5 @@ def blog_page (request):
 
         context = {
             'blog': blog,
-
         }
         return render(request, 'blog/blog.html', context)

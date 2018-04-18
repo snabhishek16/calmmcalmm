@@ -404,7 +404,7 @@
 
 .slide_a {
 	padding: 1 5%;
-	height: 650px;
+	/*height: 650px;*/
 	overflow-y: scroll;
 	position: initial;
 }

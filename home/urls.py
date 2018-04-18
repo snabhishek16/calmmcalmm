@@ -18,8 +18,9 @@ from django.contrib import admin
 from home import views as home_views
 
 
+
 urlpatterns = [
-    url(r'^$', home_views.home_page, name='index'),
-    url('(?P<name>[\w-]+)/$', home_views.product_category, name='product_category')
+url(r'^/', home_views.home_page, name='index'),
+url('(?P<name>[\w-]+)/$', home_views.product_category, name='product_category')
 ]
 

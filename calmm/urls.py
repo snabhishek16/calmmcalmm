@@ -23,9 +23,10 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^', include("home.urls", namespace='home')),
+    url(r'^/', include("home.urls", namespace='home')),
     url(r'^shop/$', home_views.shop_page, name='shop'),
-    # url(r'^blog/', include("blog.urls", namespace='blog')),
+    url('shop/(?P<name>[\w-]+)/$', home_views.shop_product_category, name='shop_product_category'),
+    url(r'^blog/', include("blog.urls", namespace='blog')),
     # # url(r'^about/', include("about.urls", namespace='about')),
     # # url(r'^contact/$', home_views.contact, name='contact_us'),
     # # url(r'^contact/', include("contact.urls", namespace='contact')),

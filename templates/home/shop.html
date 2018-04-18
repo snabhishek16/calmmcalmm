@@ -7,18 +7,30 @@
 
 <div class="row container">
     <div class="col s12">
-        <h5 class="center">BEST SELLERS</h5>
+        <h5 class="center">BEST PRODUCTS</h5>
         <p class="center">This unique jewelry is handcrafted on the beautiful island of Nantucket using fine silver and semi precious stones.
             View glasse fashion collection 2018 by Fanbong</p>
     </div>
 </div>
 
-<div class="row">
+<div class="row container">
+    <div class="col s12 center">
+        {% if cat %}
+        {% for obj in cat %}
+        <a href="{% url 'shop_product_category' name=obj.name %}" class="{% if current_category == obj.name %} active {% endif %} waves-effect waves-teal btn-flat">{{obj.name}}</a>
+        {% endfor %}
+        {% else %}
+        <p class="center">No categories</p>
+        {% endif %}
+    </div>
+</div>
+
+<div class="row container">
     <div class="col s12">
         <div class="row">
             {% if product_list %}
             {% for obj in product_list %}
-            <div class="col s12 m4 l3">
+            <div class="col s12 m6 l4">
                 <div class="card">
                     <div class="card-image">
                         <img src="{{obj.image.url}}" class="responsive-img materialboxed">
@@ -37,7 +49,7 @@
             </div>
             {% endfor %}
             {% else %}
-            <h2 class="center">No results found for this category</h2>
+            <h2 class="center">No products found for this category</h2>
             <p class="center">Kindly visit again later</p>
             {% endif %}
         </div>
