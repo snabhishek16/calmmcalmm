@@ -38,8 +38,8 @@
             <li ><a class='black-text text-blue-ligten-2 {% if home_page %} nav-active {% endif %}' href="{% url 'home:index' %}">Home</a></li>
             <li><a class='black-text text-blue-ligten-2 ' href="{% url 'shop' %}">SHOP</a></li>
             <li><a class='black-text text-blue-ligten-2 ' href="{% url 'blog:blogs' %}">BLOG</a></li>
-            <li ><a class='black-text text-blue-ligten-2 ' href="">ABOUT</a></li>
-            <li ><a class='black-text text-blue-ligten-2 ' href="">CONTACT</a></li>
+            <li ><a class='black-text text-blue-ligten-2 ' href="{% url 'about' %}">ABOUT</a></li>
+            <li ><a target="_self"  href="#modal1" data-activates="slide-out" class="black-text text-blue-ligten-2 collapse modal-trigger">CONTACT</a></li>
         </ul>
     </div>
     <div class="row navigation hide-on-med-only hide-on-large-only" id="customNavbar">
@@ -68,11 +68,55 @@
     <li ><a class='black-text text-blue-ligten-2 {% if home_page %} nav-active {% endif %}' href="{% url 'home:index' %}">HOME</a></li>
     <li><a class='black-text text-blue-ligten-2' href="{% url 'shop' %}">SHOP</a></li>
     <li><a class='black-text text-blue-ligten-2' href="{% url 'blog:blogs' %}">BLOG</a></li>
-    <li><a class='black-text text-blue-ligten-2' href="">ABOUT</a></li>
-    <li><a class='black-text text-blue-ligten-2' href="">CONTACT</a></li>
+    <li><a class='black-text text-blue-ligten-2' href="{% url 'about' %}">ABOUT</a></li>
+    <li ><a target="_self"  href="#modal1" data-activates="slide-out" class="black-text text-blue-ligten-2 collapse modal-trigger">CONTACT</a></li>
 </ul>
 
+ <!-- Modal Structure -->
+    <div id="modal1" class="modal bottom-sheet">
+        <div class="modal-content">
+            <!--<div class="chip">-->
+                <!--<img src="/static/images/sample.JPG" alt="Contact Person">Get in touch</div>-->
+            <div class="row">
+                <div class="col s12">
+                    <form method="post" action="{% url 'contact_us' %}" >{% csrf_token %}
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input id="icon_prefix" type="text" class="validate" name="name">
+                                <label for="icon_prefix">Your name</label>
+                            </div>
+                            {{form.name.errors}}
 
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">email</i>
+                                <input id="email" type="email" class="validate" name="email">
+                                <label for="email" data-error="Invalid email" data-success="Valid">Your email</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">mode_edit</i>
+                                <textarea id="icon_prefix2" class="materialize-textarea" name="message"></textarea>
+                                <label for="icon_prefix2">Message</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 right">
+                                <div class="modal-footer">
+                                    <button class="btn waves-effect waves-light pulse" type="submit" name="action">Submit
+                                        <i class="material-icons right"  onclick="Materialize.toast('{{form.errors}}', 4000,'rounded')">send</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 {% block content %}
 
@@ -157,7 +201,6 @@
     });
 </script>
 <script>
-
     $(document).ready(function(){
         $('.parallax').parallax();
     });
@@ -170,8 +213,12 @@
 
 </script>
 
+<script>
+  $(document).ready(function(){
+    $('.modal').modal();
+  });
 
-
+</script>
 
 
 

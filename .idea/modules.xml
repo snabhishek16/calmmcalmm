@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/calmm.iml" filepath="$PROJECT_DIR$/.idea/calmm.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../hathlogic/hl/.idea/hl.iml" filepath="$PROJECT_DIR$/../../hathlogic/hl/.idea/hl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../mc/mediaconnect/.idea/mediaconnect.iml" filepath="$PROJECT_DIR$/../../mc/mediaconnect/.idea/mediaconnect.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../abhi/abhisheksn/.idea/mypjt.iml" filepath="$PROJECT_DIR$/../../abhi/abhisheksn/.idea/mypjt.iml" />
     </modules>
   </component>

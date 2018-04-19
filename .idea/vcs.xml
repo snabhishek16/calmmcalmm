@@ -4,5 +4,6 @@
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../../abhi/abhisheksn" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../../hathlogic/hl" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../mc/mediaconnect" vcs="Git" />
   </component>
 </project>

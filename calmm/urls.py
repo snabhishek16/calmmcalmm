@@ -27,9 +27,8 @@ urlpatterns = [
     url(r'^shop/$', home_views.shop_page, name='shop'),
     url('shop/(?P<name>[\w-]+)/$', home_views.shop_product_category, name='shop_product_category'),
     url(r'^blog/', include("blog.urls", namespace='blog')),
-    # # url(r'^about/', include("about.urls", namespace='about')),
-    # # url(r'^contact/$', home_views.contact, name='contact_us'),
-    # # url(r'^contact/', include("contact.urls", namespace='contact')),
+    url(r'^about/$', home_views.about_page, name='about'),
+    url(r'^contact/$', home_views.contact, name='contact_us'),
 ]
 
 

@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render, get_object_or_404
 from models import *
+from .forms import *
 from django.utils import timezone
 
 # Create your views here.
@@ -54,7 +55,6 @@ def shop_page(request):
     if request.method == 'GET':
         product_list = Products.objects.filter(posted_on__lte=timezone.now()).order_by('-posted_on')
         cat = Category.objects.all()
-
         context = {
             'product_list': product_list,
             'cat': cat,
@@ -81,3 +81,23 @@ def shop_product_category(request, name=None):
 
     }
     return render(request, 'home/shop.html', context)
+
+
+def about_page(request):
+        return render(request, 'home/about.html')
+
+def contact(request):
+
+    if request.method == 'POST':
+        form = ContactForm(request.POST or None)
+        if form.is_valid():
+            instance = form.save(commit=False)
+            instance.save()
+            print 'saved'
+            return render(request, 'home/index.html')
+        else:
+            print 'error sent'
+            return render(request, 'home/index.html', {'form' : form, 'contact' : True })
+    else:
+        print 'nothing'
+        return render(request, 'home/index.html', { 'contact' : True })
